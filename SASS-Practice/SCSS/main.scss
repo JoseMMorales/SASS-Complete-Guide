@@ -1,3 +1,94 @@
-body {
-    background-color: red;
+@import "test";
+
+// VARIABLES...
+$color-primary: orange;
+$color-secondary: gray;
+$color-tertiary: royalblue;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+// NESTING...
+.nav {
+    background-color: lighten($color-primary, 20%);
+
+    ul li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            font-size: $font-sm;
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-tertiary;
+            }
+        }
+    }
+}
+
+// MIXINGS...
+/*
+@mixin headingStyles($fontSize: 50px) { // Set up a default value if not parameter
+    font-size: $fontSize;
+    color: $color-secondary;
+    text-align: center;
+}
+
+@mixin transition($param...) {
+    transition: $param;
+}
+
+.banner h1 {
+    $color-secondary: red !global; //re-assign value to a variable globally 
+    @include headingStyles($font-lg);
+}
+
+.footer h3 {
+    @include headingStyles;
+    @include transition(color 5s, background-color 1s); // Transition dinamically
+
+    &:hover {
+        color: $color-tertiary;
+        background-color: $color-primary;
+    }
+}
+*/
+
+// EXTENSIONS...
+.heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-secondary;
+    text-align: center;
+}
+
+// FUNCTIONS...
+@function fontSize($size: 5px) {
+    @return $size * 2;
+}
+
+.banner {
+    h1 {
+        @extend .heading;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+
+    p {
+        font-size: fontSize($font-sm);
+    }
+}
+
+.footer {
+    h3 {
+        @extend .heading;
+    }
+
+    p {
+        font-size: fontSize();
+    }
 }

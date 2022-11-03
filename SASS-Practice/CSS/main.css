@@ -1,2 +1,55 @@
-body {
-  background-color: red; }
+.footer h3 {
+  font-style: italic;
+  border: 3px solid blue; }
+
+.nav {
+  background-color: #ffc966; }
+  .nav ul li {
+    list-style: none; }
+    .nav ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: gray; }
+      .nav ul li a:hover {
+        color: royalblue; }
+
+/*
+@mixin headingStyles($fontSize: 50px) { // Set up a default value if not parameter
+    font-size: $fontSize;
+    color: $color-secondary;
+    text-align: center;
+}
+
+@mixin transition($param...) {
+    transition: $param;
+}
+
+.banner h1 {
+    $color-secondary: red !global; //re-assign value to a variable globally 
+    @include headingStyles($font-lg);
+}
+
+.footer h3 {
+    @include headingStyles;
+    @include transition(color 5s, background-color 1s); // Transition dinamically
+
+    &:hover {
+        color: $color-tertiary;
+        background-color: $color-primary;
+    }
+}
+*/
+.heading, .banner h1, .footer h3 {
+  color: orange;
+  font-size: 40px;
+  background-color: gray;
+  text-align: center; }
+
+.banner h1:hover {
+  background-color: green; }
+
+.banner p {
+  font-size: 40px; }
+
+.footer p {
+  font-size: 10px; }
