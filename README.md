@@ -12,6 +12,8 @@ Complete guide SASS project increases complexity from basic concepts in SCSS tow
 
 <b>Note</b> that this repo is focusing on techniques used to improve SASS so all mini-projects have been built in plain HTML to simplify understanding of architecture used.
 
+Further info about this course at https://www.udemy.com/course/sass-the-complete-sass-course-css-preprocessor/
+
 ### File Structure
 
 ![image](https://user-images.githubusercontent.com/43299285/200118387-2fd2d614-b14b-470d-bb35-2b4803f95620.png)
